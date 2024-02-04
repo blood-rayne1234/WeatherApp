@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <style rel = ""></style> -->
+    <link rel="stylesheet" href="style.css">
+    <title>TABLE AND FORM</title>
+</head>
+<body>
+   <center><h2><u>Normal Table In Html</u></h2></center>
+   <table border=1px width = "50%" align = "center" >
+   <tr> 
+        <td rowspan="2">A</td>
+        <td>B</td>
+        <td rowspan="3">D</td>
+        <td colspan ="2">E</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td rowspan = "2">G</td>
+        <td rowspan = "2">H</td>
+        <td rowspan = "2">I</td>
+    </tr>
+    <tr>
+        <td colspan = "2">I</td>    
+    </tr>
+    <tr>
+        <td colspan ="3">k</td>
+        <td>L</td>
+        <td colspan = "2">M</td>    
+
+    </tr>
+    </table>
+
+    <h2 align ="center"> Table-2</h2>
+    <table border="1" align = "center">
+            
+        <tr>
+            <th colspan="2">
+                <h2>Schedule</h2>
+            </th>
+            <th colspan="3">
+                <h2>Product</h2>
+            </th>
+        </tr>
+        <tr>
+            <th rowspan = "2">Day</th>
+            <th rowspan = "2">Time</th>
+            <th rowspan = "2">Item</th>
+            <th colspan ="2">Shipping Details</th>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td rowspan = "6">Monday</td>
+            <td rowspan="3">10:00 AM</td>
+            <td>Bag</td>
+            <td>10</td>
+            <td rowspan="3">2000.00</td>
+        </tr>
+        <tr>
+             <td>T-Shirt</td>
+             <td>10</td>        
+        </tr>
+         <tr>
+             <td>Notebook</td>
+             <td>20</td>        
+        </tr>
+         <tr>
+             <td rowspan="2">1:00 PM</td>
+             <td>T-Shirt</td>
+             <td>20</td>   
+             <td rowspan="2">1300.00</td>
+        </tr>
+         <tr>
+             <td>Notebook</td>
+             <td>15</td>        
+        </tr>
+        <tr>
+            <td>5:00 PM</td>
+            <td>Bag</td>
+            <td>8</td>
+            <td>800.00</td>         
+        </tr>
+        
+        <tr>
+            <td rowspan = "6">Tuesday</td>
+            <td rowspan="3">12:00 PM</td>
+            <td>Bag</td>
+            <td>8</td>
+            <td rowspan="3">2100.00</td>
+        </tr>
+        <tr>
+             <td>T-Shirt</td>
+             <td>12</td>        
+        </tr>
+         <tr>
+             <td>Notebook</td>
+             <td>22</td>        
+        </tr>
+         <tr>
+             <td rowspan="2">1:00 PM</td>
+             <td>T-Shirt</td>
+             <td>10</td>   
+             <td rowspan="2">600.00</td>
+        </tr>
+         <tr>
+             <td>Notebook</td>
+             <td>10</td>        
+        </tr>
+        
+</table>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<form>
+
+    <h2><center>Registration</center></h2>
+    <table align="center">
+    <tr>
+        <td>    
+             <lable name="fname">Firstname: </lable>
+        </td>
+        <td>
+            <input Fname="text">  
+        </td>
+    </tr>
+        <td>
+            <lable name="Lname">Lasttname: </lable>
+        </td>
+        <td>
+            <input Fname="text">  
+        </td>
+    <tr>
+        <td rowspan ="3">
+            <lable Address="Lname">Currest Address: </lable>
+        </td>
+        <td> 
+            <lable houseno="number">Flatno/House no: </lable>
+            <input name="number">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable locality="test">Locality:  &nbsp &nbsp &nbsp &ensp; &emsp;  </lable>
+             <input house no="text">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable city="test"> City: &nbsp &nbsp &nbsp &nbsp &nbsp  &emsp; &emsp;</lable>
+            <input City="text">
+        </td>   
+    </tr>
+    <tr>
+        <td colspan = "2">
+       
+           <span> Is current address and permanent address same? </span>
+           
+            <input type="radio" id="yes" name="address">
+            <label for ="yes">Yes</label>
+            <input type="radio" id="no" name="address">
+            <label for ="no">NO</label>
+           
+       
+        </td>
+    </tr>
+    <tr class="empty-row">                          <!--how to leave empty row in a table-->>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <label>Email:</label> 
+        </td>
+        <td>
+            <input email="email" value="abc@gmail.com">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Password:</label>
+        </td>
+        <td>
+            <input name="password">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <button>Register</button>
+        </td>
+    </tr>
+     
+    </table>
+    
+    
+ 
+    <BR>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+
+  
+ 
+  
+  
+
+    
+</form>
+</body>
+</html>

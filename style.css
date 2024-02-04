@@ -1,0 +1,11 @@
+/*h3{
+    text-decoration: dashed;
+    background-color: antiquewhite;
+}
+body{
+    background: white;
+}*/
+
+.empty-row td {
+    border: none;
+  }
