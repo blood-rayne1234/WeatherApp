@@ -2,220 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <style rel = ""></style> -->
-    <link rel="stylesheet" href="style.css">
-    <title>TABLE AND FORM</title>
+    <title>Weather App</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-   <center><h2><u>Normal Table In Html</u></h2></center>
-   <table border=1px width = "50%" align = "center" >
-   <tr> 
-        <td rowspan="2">A</td>
-        <td>B</td>
-        <td rowspan="3">D</td>
-        <td colspan ="2">E</td>
-        <td>F</td>
-    </tr>
-    <tr>
-        <td>C</td>
-        <td rowspan = "2">G</td>
-        <td rowspan = "2">H</td>
-        <td rowspan = "2">I</td>
-    </tr>
-    <tr>
-        <td colspan = "2">I</td>    
-    </tr>
-    <tr>
-        <td colspan ="3">k</td>
-        <td>L</td>
-        <td colspan = "2">M</td>    
+    <div class="card"> 
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/search.png"></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const apikey = "9b22af75b3146c900a92c15eaa6f53f1";
+        const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+        //const apiurl = "https://api.openweathermap.org/data/2.5/weather?q=bangalore&appid=9b22af75b3146c900a92c15eaa6f53f1";
 
-    </tr>
-    </table>
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon")
 
-    <h2 align ="center"> Table-2</h2>
-    <table border="1" align = "center">
-            
-        <tr>
-            <th colspan="2">
-                <h2>Schedule</h2>
-            </th>
-            <th colspan="3">
-                <h2>Product</h2>
-            </th>
-        </tr>
-        <tr>
-            <th rowspan = "2">Day</th>
-            <th rowspan = "2">Time</th>
-            <th rowspan = "2">Item</th>
-            <th colspan ="2">Shipping Details</th>
-        </tr>
-        <tr>
-            <th>Quantity</th>
-            <th>Cost</th>
-        </tr>
-        <tr>
-            <td rowspan = "6">Monday</td>
-            <td rowspan="3">10:00 AM</td>
-            <td>Bag</td>
-            <td>10</td>
-            <td rowspan="3">2000.00</td>
-        </tr>
-        <tr>
-             <td>T-Shirt</td>
-             <td>10</td>        
-        </tr>
-         <tr>
-             <td>Notebook</td>
-             <td>20</td>        
-        </tr>
-         <tr>
-             <td rowspan="2">1:00 PM</td>
-             <td>T-Shirt</td>
-             <td>20</td>   
-             <td rowspan="2">1300.00</td>
-        </tr>
-         <tr>
-             <td>Notebook</td>
-             <td>15</td>        
-        </tr>
-        <tr>
-            <td>5:00 PM</td>
-            <td>Bag</td>
-            <td>8</td>
-            <td>800.00</td>         
-        </tr>
-        
-        <tr>
-            <td rowspan = "6">Tuesday</td>
-            <td rowspan="3">12:00 PM</td>
-            <td>Bag</td>
-            <td>8</td>
-            <td rowspan="3">2100.00</td>
-        </tr>
-        <tr>
-             <td>T-Shirt</td>
-             <td>12</td>        
-        </tr>
-         <tr>
-             <td>Notebook</td>
-             <td>22</td>        
-        </tr>
-         <tr>
-             <td rowspan="2">1:00 PM</td>
-             <td>T-Shirt</td>
-             <td>10</td>   
-             <td rowspan="2">600.00</td>
-        </tr>
-         <tr>
-             <td>Notebook</td>
-             <td>10</td>        
-        </tr>
-        
-</table>
-<br>
-<br>
-<hr>
-<br>
-<br>
-<form>
-
-    <h2><center>Registration</center></h2>
-    <table align="center">
-    <tr>
-        <td>    
-             <lable name="fname">Firstname: </lable>
-        </td>
-        <td>
-            <input Fname="text">  
-        </td>
-    </tr>
-        <td>
-            <lable name="Lname">Lasttname: </lable>
-        </td>
-        <td>
-            <input Fname="text">  
-        </td>
-    <tr>
-        <td rowspan ="3">
-            <lable Address="Lname">Currest Address: </lable>
-        </td>
-        <td> 
-            <lable houseno="number">Flatno/House no: </lable>
-            <input name="number">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable locality="test">Locality:  &nbsp &nbsp &nbsp &ensp; &emsp;  </lable>
-             <input house no="text">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable city="test"> City: &nbsp &nbsp &nbsp &nbsp &nbsp  &emsp; &emsp;</lable>
-            <input City="text">
-        </td>   
-    </tr>
-    <tr>
-        <td colspan = "2">
-       
-           <span> Is current address and permanent address same? </span>
+        async function checkWeather(city){
+            const response = await fetch(apiurl + city + `&appid=${apikey}`);
            
-            <input type="radio" id="yes" name="address">
-            <label for ="yes">Yes</label>
-            <input type="radio" id="no" name="address">
-            <label for ="no">NO</label>
+           if(response.status==404){
+            document.querySelector(".error").style.display="block";
+            document.querySelector(".weather").style.display="none";
+           }else{
+            var data = await response.json();
+           // console.log(data);
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+            if(data.weather[0].main == "Clounds"){
+                weatherIcon.src = "images/clouds.png";
+            }else if(data.weather[0].main == "Clear"){
+                weatherIcon.src = "images/clear.png";
+            }else if(data.weather[0].main == "Rain"){
+                weatherIcon.src = "images/rain.png";
+            }else if(data.weather[0].main == "Drizzel"){
+                weatherIcon.src = "images/drizzel.png";
+            }else if(data.weather[0].main == "Mist"){
+                weatherIcon.src = "images/mist.png";
+            }
+
+            document.querySelector(".weather").style.display = "block";
+            document.querySelector(".error").style.display="none";
+           }
            
+           
+
+        }
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+});
+
        
-        </td>
-    </tr>
-    <tr class="empty-row">                          <!--how to leave empty row in a table-->>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>
-            <label>Email:</label> 
-        </td>
-        <td>
-            <input email="email" value="abc@gmail.com">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label>Password:</label>
-        </td>
-        <td>
-            <input name="password">
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-        <button>Register</button>
-        </td>
-    </tr>
-     
-    </table>
-    
-    
- 
-    <BR>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    
-
-  
- 
-  
-  
-
-    
-</form>
+    </script>
 </body>
 </html>
